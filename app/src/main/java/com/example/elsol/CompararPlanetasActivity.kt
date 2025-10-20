@@ -1,6 +1,9 @@
 package com.example.elsol
 
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +32,20 @@ class CompararPlanetasActivity : AppCompatActivity() {
 
         auto.setAdapter(adapter)
         auto.threshold = 1
+        auto.setOnItemClickListener(object : OnItemClickListener {
+            override fun onItemClick(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val planetaSeleccionado =
+                    auto.getAdapter().getItem(position) as Planeta
+                diametro1.setText(planetaSeleccionado.diametro.toString())
+                distancia1.setText(planetaSeleccionado.distanciaAlSol.toString())
+                densidad1.setText(planetaSeleccionado.densidad.toString())
+            }
+        })
     }
 }
 

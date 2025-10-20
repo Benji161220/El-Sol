@@ -2,5 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="yellow">#998816</color>
+    <color name="solar_yellow">#FFA000</color>
+    <color name="purpleStrong">#9C27B0</color>
+    <color name="purpleLight">#E1BEE7</color>
+    <color name="purpleTextDark">#4A148C</color>
 </resources>

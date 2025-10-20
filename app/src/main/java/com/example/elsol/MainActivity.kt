@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
             SolarItem("erupción solar", R.drawable.erupcionsolar),
             SolarItem("espículas", R.drawable.espiculas),
             SolarItem("filamentos", R.drawable.filamentos),
-            SolarItem("sol verde", R.drawable.magnetosfera),
-            SolarItem("manchas", R.drawable.manchasolar)
+            SolarItem("magnetosfera", R.drawable.magnetosfera),
+            SolarItem("mancha solar", R.drawable.manchasolar)
         )
 
         adapter = SolarAdapter(data)
