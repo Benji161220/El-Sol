@@ -1,6 +1,9 @@
 package com.example.elsol
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -32,6 +35,18 @@ class MainActivity : AppCompatActivity() {
         adapter = SolarAdapter(data)
         recycler.layoutManager = GridLayoutManager(this, 2)
         recycler.adapter = adapter
-
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.compara_planetas -> {
+                startActivity(Intent(this, CompararPlanetasActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

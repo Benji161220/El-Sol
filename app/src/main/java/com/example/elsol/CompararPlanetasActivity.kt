@@ -25,7 +25,7 @@ class CompararPlanetasActivity : AppCompatActivity() {
             this,
             android.R.layout.simple_dropdown_item_1line, listaPlanetas
         )
-        val auto = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
+        val auto = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView1)
 
         auto.setAdapter(adapter)
         auto.threshold = 1
