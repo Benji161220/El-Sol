@@ -1,59 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:text="Compara planetas"  />
-    </TableRow>
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView1"
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AutoCompleteTextView" />
-
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="AutoCompleteTextView" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            android:text="Compara planetas"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp">
 
-            <TextView
-                android:layout_width="match_parent"
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView1"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="Diametro"
-                android:textAlignment="center" />
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="#FF9C27B0"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                 />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:background="#FF9C27B0"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="8dp"
+                />
         </LinearLayout>
 
-    </TableRow>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1">
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center">
-        <TextView
-            android:text="Distancia al Sol" />
-    </TableRow>
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-        <TextView
-            android:text="Densidad" />
-    </TableRow>
+            <TableRow android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="Diámetro"
+                    android:textStyle="bold"
+                    android:textColor="#FF9C27B0"
+                    android:gravity="center"
+                    android:padding="6dp"/>
+            </TableRow>
 
-</TableLayout>
+            <TableRow>
+                <TextView
+                    android:id="@+id/diametro1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#FFE1BEE7"
+                    android:textColor="#4A148C"
+                    android:layout_marginEnd="8dp"
+                    android:text="—"/>
+                <TextView
+                    android:id="@+id/diametro2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#FFE1BEE7"
+                    android:textColor="#4A148C"
+                    android:layout_marginStart="8dp"
+                    android:text="—"/>
+            </TableRow>
+
+
+            <TableRow android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="Distancia al Sol"
+                    android:textStyle="bold"
+                    android:textColor="#FF9C27B0"
+                    android:gravity="center"
+                    android:padding="6dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/distancia1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#FFE1BEE7"
+                    android:textColor="#4A148C"
+                    android:layout_marginEnd="8dp"
+                    android:text="—"/>
+                <TextView
+                    android:id="@+id/distancia2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#FFE1BEE7"
+                    android:textColor="#4A148C"
+                    android:layout_marginStart="8dp"
+                    android:text="—"/>
+            </TableRow>
+
+            <TableRow android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="Densidad"
+                    android:textStyle="bold"
+                    android:textColor="#FF9C27B0"
+                    android:gravity="center"
+                    android:padding="6dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/densidad1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#FFE1BEE7"
+                    android:textColor="#4A148C"
+                    android:layout_marginEnd="8dp"
+                    android:text="—"/>
+                <TextView
+                    android:id="@+id/densidad2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#FFE1BEE7"
+                    android:textColor="#4A148C"
+                    android:layout_marginStart="8dp"
+                    android:text="—"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>
